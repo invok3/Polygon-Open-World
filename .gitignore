@@ -1,0 +1,19 @@
+**/Assets/ExampleAssets/
+**/Assets/PolygonMilitary/
+**/Assets/PolygonApocalypse/
+**/Assets/StarterAssets/
+**/Assets/TextMesh Pro/
+**/Assets/TutorialInfo/
+**/Library/
+**/Logs/
+**/UserSettings/
+**/obj/
+**/Temp/
+Assembly-CSharp-Editor.csproj
+.vsconfig
+Assembly-CSharp.csproj
+Assembly-CSharp.Player.csproj
+My project.sln
+*.suo
+*.meta
+*.preset
