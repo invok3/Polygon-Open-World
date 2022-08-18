@@ -135,7 +135,9 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 0}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -154,7 +156,8 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.DefaultCompany.Survival
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -620,10 +623,11 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
     Standalone: STARTER_ASSETS_PACKAGES_CHECKED
+    Windows Store Apps: STARTER_ASSETS_PACKAGES_CHECKED
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
-    Standalone: 0
+    Standalone: 1
   il2cppCompilerConfiguration: {}
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
@@ -638,18 +642,19 @@ PlayerSettings:
   gcWBarrierValidation: 0
   apiCompatibilityLevelPerPlatform:
     Standalone: 3
+    Windows Store Apps: 6
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Template_Lightweight
-  metroPackageVersion: 
-  metroCertificatePath: 
+  metroPackageName: TemplateLightweight
+  metroPackageVersion: 1.0.0.0
+  metroCertificatePath: C:\Users\Dell\Documents\UnityProjects\Survival\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 800c2f1220d2d901
   metroApplicationDescription: Template_Lightweight
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Survival
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
@@ -662,7 +667,8 @@ PlayerSettings:
   metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628, a: 1}
   metroSplashScreenUseBackgroundColor: 0
   platformCapabilities: {}
-  metroTargetDeviceFamilies: {}
+  metroTargetDeviceFamilies:
+    Desktop: True
   metroFTAName: 
   metroFTAFileTypes: []
   metroProtocolName: 
