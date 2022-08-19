@@ -1225,6 +1225,7 @@ GameObject:
   - component: {fileID: 2595169373750000515}
   - component: {fileID: 2595169373750000540}
   - component: {fileID: 7960136624761960003}
+  - component: {fileID: 7339432981420991136}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -1410,6 +1411,18 @@ MonoBehaviour:
   BottomClamp: -75
   CameraAngleOverride: 0
   LockCameraPosition: 0
+--- !u!114 &7339432981420991136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2595524176211585188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c195abc18a0ac94ca1fe2f1c75a8a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2595529727478815204
 GameObject:
   m_ObjectHideFlags: 0

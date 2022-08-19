@@ -99,6 +99,8 @@ namespace StarterAssets
         private CharacterController _controller;
         private StarterAssetsInputs _input;
         private GameObject _mainCamera;
+        private GameObject _aimCamera;
+        private Player _player;
 
         private const float _threshold = 0.01f;
 
@@ -123,6 +125,8 @@ namespace StarterAssets
             if (_mainCamera == null)
             {
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+                _aimCamera = GameObject.FindGameObjectWithTag("AimCamera");
+                _player = GetComponent<Player>();
             }
         }
 
@@ -151,8 +155,10 @@ namespace StarterAssets
             _hasAnimator = TryGetComponent(out _animator);
 
             JumpAndGravity();
+            Interact();
             GroundedCheck();
             Move();
+            Aim();
         }
 
         private void LateUpdate()
@@ -270,6 +276,22 @@ namespace StarterAssets
             {
                 _animator.SetFloat(_animIDSpeed, _animationBlend);
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
+            }
+        }
+
+        private void Aim()
+        {
+            if(_aimCamera != null)
+            {
+                _aimCamera.SetActive(_input.aim);
+            }
+        }
+
+        private void Interact()
+        {
+            if(_input.interact)
+            {
+                _player.Interact();
             }
         }
 
