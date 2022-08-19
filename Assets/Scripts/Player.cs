@@ -30,6 +30,6 @@ public class Player : MonoBehaviour
     {
         if (_interactable is null) return;
         
-        _interactable.OfferItems();
+        _interactable.Interact();
     }
 }

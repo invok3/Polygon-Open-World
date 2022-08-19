@@ -653,7 +653,7 @@ PlayerSettings:
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany
-  metroCertificateNotAfter: 800c2f1220d2d901
+  metroCertificateNotAfter: 0037fb7ff9d2d901
   metroApplicationDescription: Post Apocalypse Open World Game
   wsaImages: {}
   metroTileShortName: Survival
