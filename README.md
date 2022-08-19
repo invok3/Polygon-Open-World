@@ -1,4 +1,4 @@
-"# Polygon-Open-World" .
+# Polygon-Open-World
 
 ThirdPersonController [✔].
 
