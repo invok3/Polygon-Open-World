@@ -38,6 +38,16 @@ public class LootContainerController : MonoBehaviour
         itemList = transform.Find("LootDescription/InnerPillar/Canvas/ItemList");
     }
 
+    internal void LootAll()
+    {
+        Player _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        foreach (var item in items)
+        {
+            _player.consumables.Add(item);
+        }
+        Destroy(gameObject);
+    }
+
     // Start is called before the first frame update
     void Start()
     {

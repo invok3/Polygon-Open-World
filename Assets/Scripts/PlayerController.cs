@@ -105,6 +105,7 @@ namespace StarterAssets
         private const float _threshold = 0.01f;
 
         private bool _hasAnimator;
+        private float interactFrames;
 
         private bool IsCurrentDeviceMouse
         {
@@ -289,10 +290,31 @@ namespace StarterAssets
 
         private void Interact()
         {
-            if(_input.interact)
+            //120f and pressed retn
+            //120f and not pressed reset
+            // < 60f and not pressed : reset and interact
+            // > 60 heldinteract
+            if(interactFrames == 120f)
+            {
+                if(!_input.interact)
+                {
+                    interactFrames = 0f;
+                }
+                return;
+            }
+            if(!_input.interact && interactFrames < 60f && interactFrames > 0f)
             {
                 _player.Interact();
+                interactFrames = 0f;
+                return;
             }
+            if(interactFrames > 60f)
+            {
+                interactFrames = 120f;
+                _player.HeldInteract();
+                return;
+            }
+            if (_input.interact) interactFrames += Time.deltaTime * 60f;
         }
 
         private void JumpAndGravity()

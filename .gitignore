@@ -1,4 +1,6 @@
 **/Assets/ExampleAssets/
+**/Build/
+**/WebGL Builds/
 **/Assets/64 flat icons
 **/Assets/PolygonMilitary/
 **/Assets/PolygonApocalypse/
@@ -22,3 +24,6 @@ My project.sln
 *.ogg
 *.mp3
 *.pfx
+webgl_sharing
+ProjectSettings/Packages/com.unity.connect.share/Settings.json
+connectwebgl.zip
