@@ -99,7 +99,7 @@ namespace StarterAssets
         private CharacterController _controller;
         private StarterAssetsInputs _input;
         private GameObject _mainCamera;
-        private GameObject _aimCamera;
+        [SerializeField] private GameObject _aimCamera;
         private Player _player;
 
         private const float _threshold = 0.01f;
@@ -123,12 +123,9 @@ namespace StarterAssets
         private void Awake()
         {
             // get a reference to our main camera
-            if (_mainCamera == null)
-            {
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
                 _aimCamera = GameObject.FindGameObjectWithTag("AimCamera");
                 _player = GetComponent<Player>();
-            }
         }
 
         private void Start()
@@ -286,6 +283,7 @@ namespace StarterAssets
             {
                 _aimCamera.SetActive(_input.aim);
             }
+            _player.isAiming = _input.aim;
         }
 
         private void Interact()

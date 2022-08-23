@@ -9,6 +9,13 @@ TagManager:
   - AimCamera
   - Door
   - Loot
+  - Weapon
+  - WeaponAimTarget
+  - RightHandGrip
+  - LeftHandGrip
+  - WeaponPlaceholder
+  - AimPositionHolder
+  - HipPositionHolder
   layers:
   - Default
   - TransparentFX
