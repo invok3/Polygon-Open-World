@@ -16,6 +16,8 @@ TagManager:
   - WeaponPlaceholder
   - AimPositionHolder
   - HipPositionHolder
+  - AimDebugTransform
+  - DefaultAimLocation
   layers:
   - Default
   - TransparentFX

@@ -106,6 +106,9 @@ namespace StarterAssets
 
         private bool _hasAnimator;
         private float interactFrames;
+        [SerializeField] private Transform aimDebugTransform;
+        [SerializeField] private Transform defaultAimLocation;
+        [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
 
         private bool IsCurrentDeviceMouse
         {
@@ -126,6 +129,8 @@ namespace StarterAssets
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
                 _aimCamera = GameObject.FindGameObjectWithTag("AimCamera");
                 _player = GetComponent<Player>();
+            aimDebugTransform = GameObject.FindGameObjectWithTag("AimDebugTransform").transform;
+            defaultAimLocation = GameObject.FindGameObjectWithTag("DefaultAimLocation").transform;
         }
 
         private void Start()
@@ -259,7 +264,11 @@ namespace StarterAssets
                     RotationSmoothTime);
 
                 // rotate to face input direction relative to camera position
-                transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+                if(!_input.aim && !_input.fire)
+                {
+                    transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+                }
+                
             }
 
 
@@ -284,6 +293,24 @@ namespace StarterAssets
                 _aimCamera.SetActive(_input.aim);
             }
             _player.isAiming = _input.aim;
+            if(_input.aim || _input.fire)
+            {
+                //send raycast
+                Vector2 screenCenter = new Vector2(Screen.width / 2f, Screen.height / 2f);
+                Ray ray = Camera.main.ScreenPointToRay(screenCenter);
+                if (Physics.Raycast(ray, out RaycastHit raycastHit, 1000f, aimColliderLayerMask))
+                {
+                    aimDebugTransform.position = raycastHit.point;
+                }
+                Vector3 aimDirection = aimDebugTransform.position - transform.position;
+                aimDirection.y = 0f;
+                transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 10f);
+            }
+            else
+            {
+               aimDebugTransform.position = defaultAimLocation.position;
+                
+            }
         }
 
         private void Interact()

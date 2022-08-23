@@ -68,10 +68,6 @@ public class Player : MonoBehaviour
     }
 
 
-    private void ChangeParent(Transform weapon, Transform parent)
-    {
-        weapon.SetParent(parent);
-    }
 
 
 }

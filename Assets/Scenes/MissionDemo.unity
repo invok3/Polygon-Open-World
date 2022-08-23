@@ -5349,7 +5349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 414739179}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: FrontBarricade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15276,7 +15276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1925596745066438, guid: a58eefd979dd225418503b8a168dac87, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4527199298250504, guid: a58eefd979dd225418503b8a168dac87, type: 3}
       propertyPath: m_RootOrder
@@ -22833,6 +22833,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 660952805650990448, guid: a074bd7cef1db90429a82df3453cf8b1, type: 3}
+      propertyPath: aimColliderLayerMask.m_Bits
+      value: 193
+      objectReference: {fileID: 0}
     - target: {fileID: 2595524176211585188, guid: a074bd7cef1db90429a82df3453cf8b1, type: 3}
       propertyPath: m_Name
       value: Player
