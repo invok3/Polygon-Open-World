@@ -6,7 +6,9 @@ Aim Camera [✔].
 
 Interact with doors [✔].
 
-Pickup Items.
+Pickup Items [✔].
+
+Carry Weapons, Aim and Hip Fire [✔].
 
 Use weapons.
 
