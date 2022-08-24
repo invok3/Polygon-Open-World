@@ -10,6 +10,6 @@ Pickup Items [✔].
 
 Carry Weapons, Aim and Hip Fire [✔].
 
-Use weapons.
+Projectiles.
 
 Parkour Climb instead of Jump.
